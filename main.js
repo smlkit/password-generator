@@ -24,7 +24,7 @@ const characters = {
 lengthSlider.addEventListener('input', updateSlider);
 generateBtn.addEventListener('click', generatePassword);
 copy.addEventListener('click', function() {
-  navigator.clipboard.writeText(randomPassword);
+  navigator.clipboard.writeText(password.value);
   copy.innerHTML = 'done';
 });
 
@@ -35,12 +35,11 @@ function updateSlider() {
 
 function updatePasswordIndicator() {
   passwordIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 17 ? "medium" : "strong";
-  console.log(passwordIndicator.id);
 }
 
 function generatePassword() {
   copy.innerHTML = 'content_copy';
-  
+
   let randomPassword = "";
   let staticPassword = "";
   let passwordLength = lengthSlider.value;
