@@ -20,7 +20,6 @@ const characters = {
   symbols: "~!@#$%^&*()_-+=<>.,?[]:;",
 };
 
-let randomPassword = "";
 
 lengthSlider.addEventListener('input', updateSlider);
 generateBtn.addEventListener('click', generatePassword);
@@ -41,7 +40,8 @@ function updatePasswordIndicator() {
 
 function generatePassword() {
   copy.innerHTML = 'content_copy';
-
+  
+  let randomPassword = "";
   let staticPassword = "";
   let passwordLength = lengthSlider.value;
 
